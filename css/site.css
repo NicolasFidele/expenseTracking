@@ -12,7 +12,8 @@ body{
 /* Font of brand name on header */
 #brand-name{
 	font-family: "papyrus", "Courier New", monospace;
-	font-size: 20px;
+	font-size: 24px;
+	font-weight: bold;
   }
 /* ---set properties of input fields for login and register page---*/
 .form-control {  

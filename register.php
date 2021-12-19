@@ -80,7 +80,7 @@ mysqli_close($conn);
 				</div>
 				<!-- Return to login page -->
 				<div class="mb-3 text-center">
-					<p id="p-register">Already have an account?</p>
+					<p id="p-register"><b>Already have an account?</b></p>
 					<a href="index.php" class="btn btn-md btn-success" id="login-btn1" >Login</a>
 				</div>
 			</form>
