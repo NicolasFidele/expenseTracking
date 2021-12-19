@@ -1,0 +1,175 @@
+<!-- Navigation Bar -->
+<div class="container-fluid"> 
+	<nav class="navbar navbar-expand-lg navbar-light" id="logo">
+		<!-- element will contain all elements of the header -->
+		<div class="container"> 
+			<a class="navbar-brand" href="dashboard.php">
+			<!-- Display logo and brand name of app -->
+			<img id="image" src="images/piggy.jpg" alt="" width="38" height="30" class="d-inline-block align-text-top">
+					<span id="brand-name" class="fw-bold text-secondary">
+							OU &nbsp; Expense Tracker
+					</span>
+			</a>
+			<!-- toggle button for mobile navigation - enables viewing menu on smaller size device -->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+					aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<!-- navbar links -->
+			<div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+				<div class="menu">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a href="dashboard.php" class="nav-link fw-bold">Home &nbsp;&nbsp;</a>
+						</li>   
+						<li class="nav-item">
+							<a href="dashboard.php#income-expenditure" class="nav-link fw-bold">New Transaction&nbsp;&nbsp;</a>
+						</li>
+						<!-- link for summary offers two options that opens modals -->
+						<li class="nav-item dropdown">
+							<a href="#" class="nav-link fw-bold dropdown-toggle" data-bs-toggle="dropdown" role="button" 
+								aria-haspopup="true" aria-expanded="false">Summary &nbsp;&nbsp;</a>
+							<div class="dropdown-menu">
+								<button type="button" class="btn" data-bs-toggle="modal" 
+								data-bs-target="#modal1">By Date</button>
+								<button type="button" class="btn" data-bs-toggle="modal" 
+								data-bs-target="#modal2">By Category</button>
+								<button type="button" class="btn" data-bs-toggle="modal" 
+								data-bs-target="#modal3">By Month</button>
+							</div>
+						</li>
+						<li class="nav-item"> 
+							<!-- Log out button -->
+							<a href="logout.php" class="nav-link fw-bold">Log Out</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+</div>
+<!-- Launch modal when user clicks on summary by Date -->
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" 
+	aria-label="ModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content" id="page_modal_content">
+				<div class="modal-header" id="page_modal_header">
+					<h5 class="modal-title" id="modaltitle">Account Summary by Date</h5>
+					<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<!-- When user clicks on submit, open summaryByDate page -->
+				<form action="summaryByDate.php" method="POST" class="row needs-validation">
+					<div class="modal-body">
+						<div class="form-group">
+							<label>From:</label>
+							<input class="form-control" type="date"  id="fromdate" name="fromdate">
+						</div>
+						<div class="form-group">
+							<label>To: </label>
+							<input class="form-control" type="date"  id="todate" name="todate">
+						</div>
+						<div class="modal-footer">
+							<!-- call function to display error message if field left empty -->
+							<button type="submit" name="display" class="btn btn-primary" 
+							onclick="return modalDateSummary()">Submit</button>
+						</div>
+					</div>
+			</form>
+		</div>
+	</div>
+</div>  
+<!-- Launch modal when user clicks on summary by category -->
+<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-label="ModalCenterTitle" 
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content" id="page_modal_content1">
+			<div class="modal-header" id="page_modal_header1">
+				<h5 class="modal-title" id="modaltitle1">Account Summary by Category</h5>
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<!-- When user clicks on submit, open summaryByCategory page -->
+			<form action="summaryByCategory.php" method="POST">
+				<div class="modal-body">
+					<div class="form-group">
+						<label>Please choose a category from Expenses or Income:</label>
+						<select class="form-select mt-1 mb-2" id="category" name="category" 
+							aria-label="Default select example">
+							<optgroup label="Expenses"> 
+							<option value='0'>Choose an option</option>
+							<option value="groceries">Groceries</option>
+							<option value="bills">Bills</option>
+							<option value="transport">Transport</option>
+							<option value="clothing">Clothing</option>
+							<option value="restaurant">Restaurant</option>
+							<option value="loan">Loan</option>
+							<option value="other_exp">Other</option>
+							<optgroup label="Income">
+							<option value="salary">Salary</option>
+							<option value="bonus">Bonus</option>
+							<option value="lottery">Lottery</option>
+							<option value="interests">Interests</option>
+							<option value="other_inc">Other</option>
+						</select>
+						<p>Date</p>
+						<label>From:</label>
+						<input class="form-control" type="date"  id="fromdate1" name="fromdate">
+						<label>To: </label>
+						<input class="form-control" type="date"  id="todate1" name="todate">
+					</div>
+					<div class="modal-footer">
+						<!-- call function to display error message if field left empty -->
+						<button type="submit" name="display" class="btn btn-primary" 
+						onclick="return summary()">Submit</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>  
+<!-- Launch modal when user clicks on summary by category -->
+<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-label="ModalCenterTitle" 
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content" id="page_modal_content2">
+			<div class="modal-header" id="page_modal_header2">
+				<h5 class="modal-title" id="modaltitle2">Please choose a Month for the Current Year</h5>
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+				<!-- When user clicks on submit, open summaryByMonth page -->
+			<form action="summaryByMonth.php" method="POST">
+				<div class="modal-body">
+					<div class="form-group">
+						<label>Please choose a category from Expenses or Income:</label>
+						<select class="form-select mb-2" id="month" name="month" 
+							aria-label="Default select example">
+							<option value='0'>Choose a Month</option>
+							<option value="1">January</option>
+							<option value="2">February</option>
+							<option value="3">March</option>
+							<option value="4">April</option>
+							<option value="5">May</option>
+							<option value="6">June</option>
+							<option value="7">July</option>
+							<option value="8">August</option>
+							<option value="9">September</option>
+							<option value="10">October</option>
+							<option value="11">November</option>
+							<option value="12">December</option>
+						</select>
+					</div>
+					<div class="modal-footer">
+						<!-- call function to display error message if field left empty -->
+						<button type="submit" name="display" class="btn btn-primary" 
+						onclick="return summaryByMonth()">Submit</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>  

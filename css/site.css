@@ -1,0 +1,147 @@
+body{
+	background-color: #e5f0f1;
+}
+/* Font of h1 titles */
+#display-title, #display-title1 {
+	font-family: "papyrus", "Courier New", monospace;
+  }
+/* Font of brand name on header */
+#brand-name{
+	font-family: "papyrus", "Courier New", monospace;
+	font-size: 20px;
+  }
+/* ---set properties of input fields for login and register page---*/
+.form-control {  
+    background: transparent;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid #999;
+    background-color: #f2f2f2;
+}
+#login-btn{
+	border-radius: 20px;
+}
+#login-btn1{
+	border-radius: 20px;
+}
+
+/*----------navbar properties---------*/
+.nav-link:active,
+.nav-link:focus,
+.nav-link:hover{
+    background-color: #31080826;
+}
+.navbar {
+	position:sticky;
+	top:0;
+	z-index:10 
+}
+.nav-link{
+    font-size: 1.10em;
+}
+#main-nav {
+    background-color: rgb(105, 191, 219);
+}
+#logo{
+    background-color: rgb(105, 191, 219);
+}
+.dropdown-menu{
+	background-color: rgb(105, 191, 230);
+	min-width: 60px !important;
+}
+
+.dropdown-menu > .btn:hover {
+	background-color: rgb(6, 181, 240);
+}
+/*------------card properties--------------*/
+.card{
+	width: 350px;
+	padding: 0px 0px;
+} 
+.card-body{
+	background-color: #2d4457;
+	padding: 10px 10px;
+	border-radius: 5px;
+	width: 400px;
+	height: 350px;
+}
+/*------card properties for update record-------*/
+#updateRecord> .card{
+	width: 300px;
+	padding: 25px 25px;
+} 
+#updateRecord> .card-body{
+	background-color: #2d4457;
+	padding: 25px 25px;
+	border-radius: 10px;
+	width: 400px;
+	height: 340px;
+}
+#h3-update {
+	color: white;
+	margin-bottom: 20px;
+  }
+/* Update record button */
+#btn-update{
+	border-radius: 20px;
+}
+#btn-cancel{
+	border-radius: 20px;
+}
+
+/* ---form on dashboard.php to add expenses and income--- */
+/* Form properties to add expenses and income */
+#add_exp> .form-control{
+	border: none;
+	background-color: transparent;
+	color: #fff;
+	border-bottom: 1px solid #00ffc3;
+	width: 100%;
+	padding: 15px 0px;
+	font-size: 15px;
+	letter-spacing: 1px;
+	outline: none;
+	border-radius: 3px; 
+}
+#add_income> .form-control{
+	border: none;
+	background-color: transparent;
+	color: #fff;
+	border-bottom: 1px solid #00ffc3;
+	width: 100%;
+	padding: 15px 0px;
+	font-size: 15px;
+	letter-spacing: 1px;
+	outline: none;
+	border-radius: 3px; 
+}
+p{
+	color: grey;
+}
+/* properties of radio button in add expenses/income forms */
+.form-check > .btn-check:hover, 
+.form-check > .btn-check:focus,  
+.form-check > .btn-check:active{
+	background-color: #00ffc3;
+}
+/* Properties of modals */
+#page_modal_content,
+#page_modal_content1,
+#page_modal_content2 {
+	border-radius: 15px !important;
+	box-shadow: 0 25px 50px rgba(0, 0, 0, 0.31);
+	border: 0;
+  } 
+#page_modal_header,
+#page_modal_header1,
+#page_modal_header2   {
+	border-top-right-radius: 15px !important;
+	border-top-left-radius: 15px !important;
+  }
+
+.modal-backdrop { /* change background of modal */
+	background-color: grey;
+}
+
+
