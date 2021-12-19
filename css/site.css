@@ -25,7 +25,6 @@ body{
 #login-btn1{
 	border-radius: 20px;
 }
-
 /*----------navbar properties---------*/
 .nav-link:active,
 .nav-link:focus,
@@ -117,7 +116,10 @@ body{
 	border-radius: 3px; 
 }
 p{
-	color: grey;
+	color: white;
+}
+#p-index, #p-register{
+	color: black;
 }
 /* properties of radio button in add expenses/income forms */
 .form-check > .btn-check:hover, 

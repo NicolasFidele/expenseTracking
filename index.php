@@ -62,7 +62,7 @@ mysqli_close($conn);
 					<button type="submit" name="submit" id="login-btn" class="btn btn-primary">Sign In</button>
 				</div>
 				<div class="mb-3 text-center">
-					<p>No Account?</p>
+					<p id="p-index">No Account?</p>
 					<a href="register.php" class="btn btn-md btn-success" id="login-btn1">Register</a>
 				</div>
 			</form>
