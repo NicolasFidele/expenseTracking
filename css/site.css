@@ -1,5 +1,9 @@
 body{
-	background-color: #e5f0f1;
+	background-color: #ffffff;
+}
+#mylabel,
+#mylabel1{
+	display: none;
 }
 /* Font of h1 titles */
 #display-title, #display-title1 {
@@ -88,7 +92,6 @@ body{
 #btn-cancel{
 	border-radius: 20px;
 }
-
 /* ---form on dashboard.php to add expenses and income--- */
 /* Form properties to add expenses and income */
 #add_exp> .form-control{

@@ -283,29 +283,29 @@ if (strlen($_SESSION['userid']==0)) {
 				<div class="card-body text-center">
 					<!-- call function dashboard to display errors if fields left empty  -->
 					<form  onsubmit="return dashboard1()" id="add_income" action="#" method="POST">
-					<input type="text" class="form-control" id="incomeName" name="name" placeholder="Item Name">
-					<input type="text" class="form-control mb-4" id="incomeAmount" name="amount" placeholder="Enter Amount">
+						<input type="text" class="form-control" id="incomeName" name="name" placeholder="Item Name">
+						<input type="text" class="form-control mb-4" id="incomeAmount" name="amount" placeholder="Enter Amount">
 
-					<div class="form-check mb-2">
-						<p>Category:
-						<input type="radio" class="btn-check mt-5" name="options1" value="salary" id="option8">
-						<label class="btn btn-outline-success" for="option8" style="color:#FFF;">salary</label>
+						<div class="form-check mb-2">
+							<p>Category:
+							<input type="radio" class="btn-check mt-5" name="options1" value="salary" id="option8">
+							<label class="btn btn-outline-success" for="option8" style="color:#FFF;">salary</label>
 
-						<input type="radio" class="btn-check" name="options1" value="bonus" id="option9">
-						<label class="btn btn-outline-success" for="option9" style="color:#FFF;">bonus</label>
+							<input type="radio" class="btn-check" name="options1" value="bonus" id="option9">
+							<label class="btn btn-outline-success" for="option9" style="color:#FFF;">bonus</label>
 
-						<input type="radio" class="btn-check" name="options1" value="lottery" id="option10">
-						<label class="btn btn-outline-success" for="option10" style="color:#FFF;">lottery</label><br><br>
+							<input type="radio" class="btn-check" name="options1" value="lottery" id="option10">
+							<label class="btn btn-outline-success" for="option10" style="color:#FFF;">lottery</label><br><br>
 
-						<input type="radio" class="btn-check" name="options1" value="interests" id="option11">
-						<label class="btn btn-outline-success mb-2" for="option11" style="color:#FFF;">interests</label>
+							<input type="radio" class="btn-check" name="options1" value="interests" id="option11">
+							<label class="btn btn-outline-success mb-2" for="option11" style="color:#FFF;">interests</label>
 
-						<input type="radio" class="btn-check" name="options1" value="other_inc" id="option12">
-						<label class="btn btn-outline-success mb-2" for="option12" style="color:#FFF;">other</label>
-					</div>
-					<div class="mb-3 d-grid gap-2">
-						<button type="submit" name="add_income" class="btn btn-primary">Add Income</button>
-					</div>
+							<input type="radio" class="btn-check" name="options1" value="other_inc" id="option12">
+							<label class="btn btn-outline-success mb-2" for="option12" style="color:#FFF;">other</label>
+						</div>
+						<div class="mb-3 d-grid gap-2">
+							<button type="submit" name="add_income" class="btn btn-primary">Add Income</button>
+						</div>
 					</form>
 				</div>
 			</div>

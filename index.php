@@ -54,15 +54,17 @@ mysqli_close($conn);
 		<div class="col-lg-6"> 
 			<!-- call function reg_validate to cater for empty fields -->
 			<form onsubmit="return reg_validate()" id="signin" action="#" method="POST">
+				<label id="mylabel" for="email">Email</label>
 				<input type="email" class="form-control mb-3" id="email" name="email" 
 				placeholder="&#xf0e0; Enter your Email address" style="font-family:Arial, FontAwesome" autofocus>
+				<label id="mylabel1" for="password">Password</label>
 				<input type="password" class="form-control mb-4" id="password1" name="password" 
 				placeholder="&#xf023; Enter your password" style="font-family:Arial, FontAwesome">	
 				<div class="mb-3 d-grid gap-2">
 					<button type="submit" name="submit" id="login-btn" class="btn btn-primary">Sign In</button>
 				</div>
 				<div class="mb-3 text-center">
-					<p id="p-index">No Account?</p>
+					<p id="p-index"><b>No Account?</b></p>
 					<a href="register.php" class="btn btn-md btn-success" id="login-btn1">Register</a>
 				</div>
 			</form>
