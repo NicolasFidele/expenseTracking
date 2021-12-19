@@ -25,7 +25,7 @@ if (strlen($_SESSION['userid']==0)) {
 <body>
 <?php 
 	//Include header to display navigation bar
-	require_once 'includes/header.php';
+	require_once 'includes/header.html';
 ?>
 <?php
 //user clicks on submit button

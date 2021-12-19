@@ -24,7 +24,7 @@ if (strlen($_SESSION['userid']==0)) {
 	<!-- Font Awesome Icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<?php  require_once 'includes/header.php';  ?>
+<?php  require_once 'includes/header.html';  ?>
 <!-- Intro message to be displayed as user logs in - contains user's name -->
 <div class="container-fluid">
 	<div class="row justify-content-center align-items-center">

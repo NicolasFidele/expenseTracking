@@ -27,7 +27,7 @@ if (strlen($_SESSION['userid']==0)) { //if session is empty, log out
 <body>
 <?php 
 	//Include header to display navigation bar
-	require_once 'includes/header.php';
+	require_once 'includes/header.html';
 ?>
 <div class="row justify-content-center mt-5">
 	<div class="col-11 col-lg-5 col-xl-4 mb-3"> 
