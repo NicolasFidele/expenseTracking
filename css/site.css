@@ -7,12 +7,14 @@ body{
 }
 /* Font of h1 titles */
 #display-title, #display-title1 {
-	font-family: "papyrus", "Courier New", monospace;
+	font-family: "Courier New", monospace;
+	color: black;
+	font-weight: bold;
   }
 /* Font of brand name on header */
 #brand-name{
-	font-family: "papyrus", "Courier New", monospace;
-	font-size: 24px;
+	color: black;
+	font-size: 20px;
 	font-weight: bold;
   }
 /* ---set properties of input fields for login and register page---*/
@@ -54,7 +56,6 @@ body{
 	background-color: rgb(105, 191, 230);
 	min-width: 60px !important;
 }
-
 .dropdown-menu > .btn:hover {
 	background-color: rgb(6, 181, 240);
 }
