@@ -1,5 +1,4 @@
 // bar chart for summary by category
-//fetch output
 $.ajax({
 	// link to php code to extract data
 	url: "chartCategory.php", 
@@ -57,11 +56,9 @@ $.ajax({
 	method: "POST",
 	dataType:"JSON",
 	success: function(data) { //if success
-		
 		var category = [];
 		var amount = [];
 		var color = [];
-
 		for(var i in data){
 			category.push(data[i].category);
 			amount.push(data[i].totalamount);
@@ -198,7 +195,6 @@ $.ajax({
 		var category = [];
 		var amount = [];
 		var color = [];
-
 		for(var i in data){
 			category.push(data[i].category);
 			amount.push(data[i].totalamount);

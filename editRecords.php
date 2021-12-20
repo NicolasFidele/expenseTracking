@@ -33,11 +33,12 @@ if (strlen($_SESSION['userid']==0)) { //if session is empty, log out
 	<div class="col-11 col-lg-5 col-xl-4 mb-3"> 
 		<div class="card border-0" id="updateRecord"> 
 			<div class="card-body text-center" id="updateRecord">
-								<!-- Form to edit record - Already contains actual records -->
+				<!-- Form to edit record - Already contains actual records -->
 				<form onsubmit="return editRecords()" action="" method="POST">
 					<h3 id="h3-update" class="justify-content-center tw-light">
 					Update Record
 					</h3>
+					<!-- set value to actual chosen record -->
 					<input type="text" class="form-control" id="item" name="item" value= "<?php echo "$item"?>">
 					<input type="text" class="form-control my-4" id="amount" name="amount" value= "<?php echo "$amount"?>">
 					<div class="form-group my-4">

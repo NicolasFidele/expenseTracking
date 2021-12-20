@@ -165,7 +165,6 @@ if(isset($_POST['display'])){
 								//display message and refresh page
 								echo "<script>alert('Delete Successful');</script>";
 								echo "<script>window.location.href='summaryByMonth.php'</script>";
-							
 							} 
 						}?>
 					<?php

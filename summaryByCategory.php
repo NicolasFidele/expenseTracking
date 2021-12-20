@@ -77,8 +77,10 @@ if (strlen($_SESSION['userid']==0)) {
 				<?php
 					//display summary by category - run query to get all details and query2 to get total amount only
 					$userid = $_SESSION['userid'];
+					//query to fetch data from database
 					$query = ("select * from income_expenditure where category = '$category' AND user_id = '$userid' 
 					AND (transaction_date BETWEEN '$fromdate' AND '$todate')");
+					//query to fetch the total amount only (to be displayed under the table)
 					$query2 = ("select sum(amount) as totalamount from income_expenditure 
 					WHERE (category = '$category' AND user_id = '$userid')  
 					AND (transaction_date BETWEEN '$fromdate' AND '$todate')");    
@@ -115,7 +117,8 @@ if (strlen($_SESSION['userid']==0)) {
 						</tbody>
 			</table>
 			<div class="text-muted text-center mt-1">
-				<?php               
+				<?php  
+					//query2 - display total amount for chosen category below table           
 					while ($row=mysqli_fetch_array($run2)) { 
 						echo 'Total '.$category.' : Rs '.'<b>'.$sum=$row['totalamount'].'</b>'.'.';
 				}?>

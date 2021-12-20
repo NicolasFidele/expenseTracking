@@ -47,6 +47,7 @@ if(isset($_POST['display'])){
 				$todate = $_SESSION['todate'];
 			?>
 				<h5 class="text-center">
+					<!-- Display on top of table the date slot chosen - format converted to dd/mmm/yyyy -->
 					Expenses Summary from <?php echo date("d-M-y", strtotime($fromdate))?>
 					to <?php echo date("d-M-y", strtotime($todate))?>
 				</h5>
